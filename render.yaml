@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: collaborative-map-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: ./
+    envVars:
+      - key: OUTSCRAPER_API_KEY
+        sync: false
+      - key: EXA_API_KEY
+        sync: false
+      - key: SUPADATA_API_KEY
+        sync: false
+      - key: CACHE_DURATION
+        value: 3600
+      - key: MAX_RESULTS_PER_QUERY
+        value: 20
+      - key: DEFAULT_COUNTRY
+        value: Guatemala
+      - key: DEFAULT_LANGUAGE
+        value: es
